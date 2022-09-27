@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "webplusmultimedia/admin-architect",
+    "description": "Admin Architecte Base on Laravel + Liwewire & AlpineJs",
     "keywords": [
-        ":vendor_name",
+        "webplusmultimedia",
         "laravel",
-        ":package_slug"
+        "admin-architect"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/webplusmultimedia/admin-architect",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "webplusmultimedia",
+            "email": "contact@webplusm.net",
             "role": "Developer"
         }
     ],
@@ -35,13 +35,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Webplusmultimedia\\AdminArchitect\\": "src",
+            "Webplusmultimedia\\AdminArchitect\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Webplusmultimedia\\AdminArchitect\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -51,15 +51,19 @@
         "format": "vendor/bin/pint"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Webplusmultimedia\\AdminArchitect\\AdminArchitectServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "AdminArchitect": "Webplusmultimedia\\AdminArchitect\\Facades\\AdminArchitect"
             }
         }
     },
